@@ -12,6 +12,7 @@ RefereeWindow::RefereeWindow(Referees referees,QWidget *parent) :
 
 RefereeWindow::~RefereeWindow()
 {
+
     delete ui;
 }
 
@@ -42,18 +43,26 @@ void RefereeWindow::on_Show_clicked()
     {
        QString print= referees.ToStringReadableAll();
        ui->textEdit->setText(print);
+       ui->radioButton_showAll->setAutoExclusive(false);
+       ui->radioButton_showAll->setChecked(false);
+       ui->radioButton_showAll->setAutoExclusive(true);
     }
+
     if(ui->radioButton_showOne->isChecked())
     {
         QString firstName=ui->lineEdit_show_firstName->text();
         QString surName=ui->lineEdit_show_surName->text();
 
         QString print= referees.ToStringReadableOne(firstName,surName);
+
         if(print!="Does not exist")
         {
             ui->textEdit->setText(print);
             ui->lineEdit_show_firstName->clear();
             ui->lineEdit_show_surName->clear();
+            ui->radioButton_showAll->setAutoExclusive(false);
+            ui->radioButton_showAll->setChecked(false);
+            ui->radioButton_showAll->setAutoExclusive(true);
         }
 
         else
@@ -61,9 +70,13 @@ void RefereeWindow::on_Show_clicked()
             QMessageBox::warning(this,"Referee does not exist", "The given referee does not exist in Referee GameBook...");
             ui->lineEdit_show_firstName->clear();
             ui->lineEdit_show_surName->clear();
+            ui->radioButton_showOne->setAutoExclusive(false);
+            ui->radioButton_showOne->setChecked(false);
+            ui->radioButton_showOne->setAutoExclusive(true);
         }
 
     }
+
 }
 
 void RefereeWindow::on_Remove_clicked()

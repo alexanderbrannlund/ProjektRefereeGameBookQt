@@ -99,7 +99,7 @@ int Referees::GetNrOfRef() const
 
 QString Referees::ToStringSaveable() const
 {
-    QString retStr="";
+   QString retStr="";
 
     for(int i=0; i<count; i++)
     {
@@ -144,7 +144,7 @@ QString Referees::ToStringReadableOne(const QString& firstName, const QString& s
 
 }
 
-void Referees::ReadFromFile(QString fileName)
+void Referees::ReadFromFile(const QString& fileName)
 {
     QFile file(fileName);
     if(!file.open(QFile::ReadOnly | QFile::Text))
@@ -172,7 +172,7 @@ void Referees::ReadFromFile(QString fileName)
 
 }
 
-void Referees::SaveToFile(QString fileName)
+void Referees::SaveToFile(const QString& fileName) const
 {
             QFile file(fileName);
             if(!file.open(QFile::WriteOnly | QFile::Text))

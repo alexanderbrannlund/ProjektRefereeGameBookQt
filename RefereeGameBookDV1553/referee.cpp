@@ -48,8 +48,8 @@ int Referee::GetTotalGoals() const
 
 QString Referee::ToStringSaveable() const
 {
-  QString ret;
-  QString convertInt;
+ QString ret;
+ QString convertInt="";
   ret+= convertInt.setNum(this->refID)+"\n";
   ret+= this->firstName+"\n";
   ret+= this->surName+"\n";
@@ -63,13 +63,13 @@ QString Referee::ToStringSaveable() const
 QString Referee::ToStringReadable() const
 {
     QString ret;
-    QString convertInt;
-    ret+= "Ref Id: " + convertInt.setNum(this->refID)+"\n";
+    QString convertInt="";
+    ret+= "Ref Id: " + convertInt.setNum(this->refID) +"\n";
     ret+= "First name: " + this->firstName + "\n";
     ret+= "Surname: " + this->surName+"\n";
-    ret+= "Total number of penalty minutes called: " + convertInt.setNum(this->totalPenalties)+"\n";
-    ret+= "Total number of penalty shots called: " + convertInt.setNum(this->totalPenaltyShots)+"\n";
-    ret+= "Total number of goals called: " + convertInt.setNum(this->totalGoals)+"\n\n";
+    ret+= "Total number of penalty minutes called: " + convertInt.setNum(this->totalPenalties) +"\n";
+    ret+= "Total number of penalty shots called: " + convertInt.setNum(this->totalPenaltyShots) +"\n";
+    ret+= "Total number of goals called: " + convertInt.setNum(this->totalGoals) +"\n\n";
 
     return ret;
 }

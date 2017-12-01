@@ -16,6 +16,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
     Referee test(1,"Test", "Testsson");
     QMessageBox::information(this,"Test", test.ToStringReadable());
     QMessageBox::information(this,"Test", test.ToStringSaveable());
@@ -91,4 +92,30 @@ void MainWindow::on_pushButton_3_clicked()
     hide();
     refereeWindow->show();
 
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    Team team1("Test" ,"test center");
+
+    QMessageBox::information(this,"Test", team1.ToStringReadable());
+    QMessageBox::information(this,"Test", team1.ToStringSaveable());
+    QMessageBox::information(this,"Test", team1.GetTeamName());
+
+    team1.SetHomeArenaName("test 2 center");
+
+    QMessageBox::information(this,"Test", team1.ToStringReadable());
+
+    Team team2("test2", "Abb test");
+    Team team3("Test", "test 2 center");
+
+    if(!(team2==team3))
+    {
+      QMessageBox::information(this,"Test", "De är inte lika!!!");
+    }
+
+    if(team1==team3)
+    {
+        QMessageBox::information(this,"Test", "De är lika!!!");
+    }
 }

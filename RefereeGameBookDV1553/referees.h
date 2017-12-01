@@ -24,8 +24,8 @@ public:
     QString ToStringReadableAll()const;
 
 
-    void ReadFromFile(QString fileName);
-    void SaveToFile(QString fileName);
+    void ReadFromFile(const QString& fileName);
+    void SaveToFile(const QString& fileName)const;
 
     void Clear();
 

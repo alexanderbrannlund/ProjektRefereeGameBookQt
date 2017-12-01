@@ -28,7 +28,8 @@ SOURCES += \
         mainwindow.cpp \
     referee.cpp \
     referees.cpp \
-    refereewindow.cpp
+    refereewindow.cpp \
+    team.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,7 +40,8 @@ HEADERS += \
     ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referee.h \
     referee.h \
     referees.h \
-    refereewindow.h
+    refereewindow.h \
+    team.h
 
 FORMS += \
         mainwindow.ui \
