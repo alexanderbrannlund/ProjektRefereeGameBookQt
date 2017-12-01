@@ -25,10 +25,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    referee.cpp \
+    referees.cpp \
+    refereewindow.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referee.h \
+    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referees.h \
+    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/refereewindow.h \
+    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/team.h \
+    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referee.h \
+    referee.h \
+    referees.h \
+    refereewindow.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    refereewindow.ui
