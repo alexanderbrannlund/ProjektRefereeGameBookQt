@@ -40,7 +40,7 @@ QString Team::ToStringSaveable() const
 {
     QString ret="";
     ret+= this->teamName + "\n";
-    ret+= this->homeArena + "\n \n";
+    ret+= this->homeArena + "\n";
 
     return ret;
 }

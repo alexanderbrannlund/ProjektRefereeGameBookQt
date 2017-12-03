@@ -119,3 +119,44 @@ void MainWindow::on_pushButton_4_clicked()
         QMessageBox::information(this,"Test", "De är lika!!!");
     }
 }
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    Teams refGB;
+    refGB.AddTeam("Test", "TestArena");
+    refGB.AddTeam("Test2", "TestArena");
+    refGB.AddTeam("Test3", "TestArena");
+    refGB.AddTeam("Test4", "TestArena");
+
+
+    if(refGB.AddTeam("Test3","TestArena")==false)
+    {
+        QMessageBox::warning(this,"Team already exist","The team does already exist in Referee Gamebook");
+    }
+
+    refGB.AddTeam("Test5","TestArena");
+
+    if(refGB.RemoveTeam("Test2"))
+    {
+        QMessageBox::information(this, "Removed", "Team was removed");
+    }
+    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+
+    QMessageBox::information(this,"Save","Saving to file");
+
+    refGB.SaveToFile("C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/testRefGBTeam.txt");
+
+    QMessageBox::information(this,"Clear","Clearing RefGB");
+    refGB.Clear();
+
+    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+
+    QMessageBox::information(this,"Read","Reading from file");
+
+    refGB.ReadFromFile("C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/testRefGBTeam.txt");
+
+
+    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+
+
+}

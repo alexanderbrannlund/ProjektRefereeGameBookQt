@@ -3,6 +3,7 @@
 #include "referee.h" //bara för test
 #include "referees.h" //bara för test
 #include "team.h" //för test
+#include "teams.h" //för test
 #include "refereewindow.h"
 
 #include <QMainWindow>
@@ -27,6 +28,8 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::MainWindow *ui;
