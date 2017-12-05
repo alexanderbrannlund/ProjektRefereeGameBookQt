@@ -88,7 +88,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    refereeWindow= new RefereeWindow(referees,this);
+    refereeWindow= new RefereeWindow(&referees,this);
     hide();
     refereeWindow->show();
 
@@ -159,4 +159,11 @@ void MainWindow::on_pushButton_5_clicked()
     QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
 
 
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+   teamWindow=new TeamWindow(&teams, this);
+   hide();
+   teamWindow->show();
 }

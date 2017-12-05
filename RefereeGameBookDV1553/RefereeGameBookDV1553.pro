@@ -35,11 +35,6 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referee.h \
-    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referees.h \
-    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/refereewindow.h \
-    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/team.h \
-    ../../../Qt projekt/RefereeGameBook Projekt/RefereeGameBookQt/referee.h \
     referee.h \
     referees.h \
     refereewindow.h \

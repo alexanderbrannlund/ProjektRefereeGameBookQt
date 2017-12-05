@@ -12,7 +12,7 @@ class RefereeWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit RefereeWindow(Referees referees,QWidget *parent = 0);
+    explicit RefereeWindow(Referees* referees,QWidget *parent = 0);
     ~RefereeWindow();
 
 private slots:
@@ -22,9 +22,11 @@ private slots:
 
     void on_Remove_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::RefereeWindow *ui;
-    Referees referees;
+    Referees* referees;
 };
 
 #endif // REFEREEWINDOW_H
