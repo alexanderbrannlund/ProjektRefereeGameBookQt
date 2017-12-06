@@ -31,7 +31,8 @@ SOURCES += \
     refereewindow.cpp \
     team.cpp \
     teams.cpp \
-    teamwindow.cpp
+    teamwindow.cpp \
+    game.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +41,8 @@ HEADERS += \
     refereewindow.h \
     team.h \
     teams.h \
-    teamwindow.h
+    teamwindow.h \
+    game.h
 
 FORMS += \
         mainwindow.ui \
