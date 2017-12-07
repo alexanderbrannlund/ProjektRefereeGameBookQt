@@ -27,9 +27,7 @@ public:
     QString ToStringReadable()const;
     QString ToStringSaveable()const;
 
-    //void SetRefID(int refID);
-    //void SetFirstName(QString firstName);
-    //void SetSurName(QString surName);
+
     void SetTotalPenalties(int minToAdd);
     void SetTotalPenaltyShots(int toAdd);
     void SetTotalGoals(int goalsToAdd);

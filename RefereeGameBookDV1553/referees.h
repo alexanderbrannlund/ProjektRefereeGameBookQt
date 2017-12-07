@@ -18,10 +18,13 @@ public:
     bool AddReferee(const QString& firstName, const QString& surName,int totalPenalties, int totalPenaltyShots,int totalGoals, int refID);
     bool RemoveReferee(const QString& firstName, const QString& surName);
     int GetNrOfRef()const;
+    int FindRefereeById(int refId);
+    void AddGameToRef(int index, int addPMin, int addPShot, int addGoals);
 
     QString ToStringSaveable()const;
     QString ToStringReadableOne(const QString& firstName, const QString& surName)const;
     QString ToStringReadableAll()const;
+    QString ToStringForGame(int index)const;
 
 
     void ReadFromFile(const QString& fileName);

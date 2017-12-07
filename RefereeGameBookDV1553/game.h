@@ -1,5 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
+#include "referees.h"
 #include <QString>
 #include <QDate>
 
@@ -29,7 +30,7 @@ public:
     void SetPenaltyShots(int pShots);
     void SetGoals(int goals);
 
-    QString ToStringReadable();
+    QString ToStringReadable(Referees* referees);
     QString ToStringSaveable();
     bool operator ==(const Game& other)const;
 };

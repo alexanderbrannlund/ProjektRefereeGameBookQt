@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include "game.h" // för test
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -166,4 +167,37 @@ void MainWindow::on_pushButton_6_clicked()
    teamWindow=new TeamWindow(&teams, this);
    hide();
    teamWindow->show();
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    referees.AddReferee("Test1","Testsson",0,0,0,-1);
+    referees.AddReferee("Test2","Testsson",0,0,0,1);
+    referees.AddReferee("Test3","Testsson",0,0,0,-1);
+    referees.AddReferee("Test4","Testsson",0,0,0,-1);
+    referees.AddReferee("Test5","Testsson",0,0,0,-1);
+
+    Game test("Home","Guest", QDate::currentDate());
+    QMessageBox::information(this,"Test", test.ToStringReadable(&referees));
+    QMessageBox::information(this,"Test", test.ToStringSaveable());
+    test.SetGoals(5);
+    test.SetPenaltiesMin(55);
+    test.SetPenaltyShots(2);
+
+    QMessageBox::information(this,"Test", test.ToStringReadable(&referees));
+    QMessageBox::information(this,"Test", test.ToStringSaveable());
+
+    Game test2("Home","Guest", QDate::currentDate());
+    Game test3("Home2","Guest", QDate::currentDate());
+
+    if(!(test==test3))
+    {
+      QMessageBox::information(this,"Test", "De är inte lika!!!");
+    }
+
+    if(test==test2)
+    {
+        QMessageBox::information(this,"Test", "De är lika!!!");
+    }
+
 }

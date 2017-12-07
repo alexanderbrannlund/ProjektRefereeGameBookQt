@@ -40,10 +40,7 @@ Referees::Referees()
 
 Referees::~Referees()
 {
-    for(int i=0; i<this->count; i++)
-    {
-        delete referees[i];
-    }
+    Clear();
     delete[] referees;
 
 }
@@ -97,6 +94,28 @@ int Referees::GetNrOfRef() const
     return this->count;
 }
 
+int Referees::FindRefereeById(int refId)
+{
+    int index;
+    for(int i=0; i<count; i++)
+    {
+        if(refId==referees[i]->GetRefID())
+        {
+            index=i;
+            i=count;
+        }
+    }
+
+    return index;
+}
+
+void Referees::AddGameToRef(int index, int addPMin, int addPShot, int addGoals)
+{
+    referees[index]->SetTotalPenalties(addPMin);
+    referees[index]->SetTotalPenaltyShots(addPShot);
+    referees[index]->SetTotalGoals(addGoals);
+}
+
 QString Referees::ToStringSaveable() const
 {
    QString retStr="";
@@ -122,6 +141,16 @@ QString Referees::ToStringReadableAll() const
 
     return retStr;
 
+}
+
+QString Referees::ToStringForGame(int index) const
+{
+    QString ret;
+
+    if(index!=-1)
+        ret+=referees[index]->GetFirstName()+" "+referees[index]->GetSurName();
+
+    return ret;
 }
 
 QString Referees::ToStringReadableOne(const QString& firstName, const QString& surName) const
@@ -166,9 +195,6 @@ void Referees::ReadFromFile(const QString& fileName)
        AddReferee(firstName,surName,penaltieMins,penaltyShots,goals,refId);
     }
     file.close();
-
-
-
 
 }
 

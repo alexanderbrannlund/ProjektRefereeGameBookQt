@@ -39,10 +39,7 @@ Teams::Teams()
 
 Teams::~Teams()
 {
-    for(int i=0; i<this->count; i++)
-    {
-        delete teams[i];
-    }
+    Clear();
     delete[] teams;
 }
 
