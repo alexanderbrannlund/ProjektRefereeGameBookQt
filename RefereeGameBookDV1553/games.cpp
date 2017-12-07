@@ -172,12 +172,15 @@ void Games::ReadFromFile(const QString &fileName)
 
        QString homeTeam=in.readLine();
        QString guestTeam= in.readLine();
-       QDate date=QDate::fromString(in.readLine(),"YYYY-MM-dd");
+       QString date=in.readLine();
        int refId=in.readLine().toInt();
        int penaltieMins=in.readLine().toInt();
        int penaltyShots=in.readLine().toInt();
        int goals=in.readLine().toInt();
-       AddGame(homeTeam, guestTeam,date,refId,penaltieMins,penaltyShots,goals);
+
+       QDate toDate=QDate::fromString(date,"yyyy-MM-dd");
+
+       AddGame(homeTeam, guestTeam,toDate,refId,penaltieMins,penaltyShots,goals);
     }
     file.close();
 }

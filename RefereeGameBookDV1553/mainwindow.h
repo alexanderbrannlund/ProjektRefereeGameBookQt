@@ -6,6 +6,7 @@
 #include "teams.h" //för test
 #include "refereewindow.h"
 #include"teamwindow.h"
+#include "games.h"
 
 #include <QMainWindow>
 
@@ -35,6 +36,8 @@ private slots:
     void on_pushButton_6_clicked();
 
     void on_pushButton_7_clicked();
+
+    void on_pushButton_8_clicked();
 
 private:
     Ui::MainWindow *ui;

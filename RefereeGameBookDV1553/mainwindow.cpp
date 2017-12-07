@@ -177,7 +177,7 @@ void MainWindow::on_pushButton_7_clicked()
     referees.AddReferee("Test4","Testsson",0,0,0,-1);
     referees.AddReferee("Test5","Testsson",0,0,0,-1);
 
-    Game test("Home","Guest", QDate::currentDate());
+    Game test("Home","Guest", QDate::currentDate(),1);
     QMessageBox::information(this,"Test", test.ToStringReadable(&referees));
     QMessageBox::information(this,"Test", test.ToStringSaveable());
     test.SetGoals(5);
@@ -200,4 +200,52 @@ void MainWindow::on_pushButton_7_clicked()
         QMessageBox::information(this,"Test", "De är lika!!!");
     }
 
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    referees.AddReferee("Test1","Testsson",0,0,0,-1);
+    referees.AddReferee("Test2","Testsson",0,0,0,1);
+    referees.AddReferee("Test3","Testsson",0,0,0,-1);
+    referees.AddReferee("Test4","Testsson",0,0,0,-1);
+    referees.AddReferee("Test5","Testsson",0,0,0,-1);
+
+    Games refGB(&referees);
+    refGB.AddGame("Home","Guest", QDate::currentDate());
+    refGB.AddGame("Home2","Guest", QDate::currentDate());
+    refGB.AddGame("Home3","Guest", QDate::currentDate());
+    refGB.AddGame("Home4","Guest", QDate::currentDate());
+
+
+    if(refGB.AddGame("Home3","Guest", QDate::currentDate())==false)
+    {
+        QMessageBox::warning(this,"Game already exist","The Game does already exist in Referee Gamebook");
+    }
+
+    refGB.AddGame("Home5","Guest", QDate::currentDate());
+
+    if(refGB.RemoveGame("Home2","Guest", QDate::currentDate()))
+    {
+        QMessageBox::information(this, "Removed", "Team was removed");
+    }
+
+    refGB.AddGoalsAndPenalties("Home3","Guest", QDate::currentDate(),5,2,4);
+    refGB.ChangeReferee("Home3","Guest", QDate::currentDate(),2);
+    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+
+    QMessageBox::information(this,"Save","Saving to file");
+
+    refGB.SaveToFile("C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/testRefGBGame.txt");
+
+    QMessageBox::information(this,"Clear","Clearing RefGB");
+    refGB.Clear();
+
+    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+
+    QMessageBox::information(this,"Read","Reading from file");
+
+    refGB.ReadFromFile("C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/testRefGBGame.txt");
+
+
+    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
 }
