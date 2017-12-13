@@ -231,7 +231,7 @@ void MainWindow::on_pushButton_8_clicked()
 
     refGB.AddGoalsAndPenalties("Home3","Guest", QDate::currentDate(),5,2,4);
     refGB.ChangeReferee("Home3","Guest", QDate::currentDate(),2);
-    QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+    QMessageBox::information(this,"ToString", refGB.ToStringReadableAll());
 
     QMessageBox::information(this,"Save","Saving to file");
 
@@ -248,4 +248,6 @@ void MainWindow::on_pushButton_8_clicked()
 
 
     QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
+
+
 }

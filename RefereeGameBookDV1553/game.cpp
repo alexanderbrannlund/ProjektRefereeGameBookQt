@@ -15,7 +15,12 @@ Game::Game(const QString &homeTeam, const QString &guestTeam, QDate date, int re
 
 Game::~Game()
 {
-   //Empty
+    //Empty
+}
+
+int Game::GetRefID() const
+{
+    return this->refID;
 }
 
 void Game::SetRefID(int refID)
@@ -42,17 +47,30 @@ QString Game::ToStringReadable(Referees* referees)
 {
     QString ret;
     QString convertToQstring;
-    int index=referees->FindRefereeById(refID);
+    if(refID!=-1)
+    {
+        int index=referees->FindRefereeById(refID);
+        ret+="Home team: "+this->homeTeam+"\n";
+        ret+="Guest team: "+this->guestTeam+"\n";
+        ret+="Date: " + this->date.toString("yyyy-MM-dd")+"\n";
+        ret+="Referee:" + referees->ToStringForGame(index)+"\n";
+        ret+="Penalty mins: "+ convertToQstring.setNum(this->penaltiesMin)+"\n";
+        ret+="Penalty shots: "+ convertToQstring.setNum(this->penaltyShots)+"\n";
+        ret+="Goals: "+ convertToQstring.setNum(this->goals)+"\n";
+    }
 
-    ret+="Home team: "+this->homeTeam+"\n";
-    ret+="Guest team: "+this->guestTeam+"\n";
-    ret+="Date: " + this->date.toString("yyyy-MM-dd")+"\n";
-    ret+="Referee:" + referees->ToStringForGame(index)+"\n";
-    ret+="Penalty mins: "+ convertToQstring.setNum(this->penaltiesMin)+"\n";
-    ret+="Penalty shots: "+ convertToQstring.setNum(this->penaltyShots)+"\n";
-    ret+="Goals: "+ convertToQstring.setNum(this->goals)+"\n";
+    else
+    {
+        ret+="Home team: "+this->homeTeam+"\n";
+        ret+="Guest team: "+this->guestTeam+"\n";
+        ret+="Date: " + this->date.toString("yyyy-MM-dd")+"\n";
+        ret+="Referee: No referee has been given the game\n";
+        ret+="Penalty mins: "+ convertToQstring.setNum(this->penaltiesMin)+"\n";
+        ret+="Penalty shots: "+ convertToQstring.setNum(this->penaltyShots)+"\n";
+        ret+="Goals: "+ convertToQstring.setNum(this->goals)+"\n";
+    }
 
-    referees->ToStringForGame(refID)+"\n";
+
 
     return ret;
 

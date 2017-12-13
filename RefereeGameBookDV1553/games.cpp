@@ -92,6 +92,9 @@ void Games::AddGoalsAndPenalties(const QString &homeTeam, const QString &guestTe
         games[index]->SetPenaltiesMin(penaltiesMin);
         games[index]->SetPenaltyShots(penaltyShots);
         games[index]->SetGoals(goals);
+
+        referees->AddGameToRef(referees->FindRefereeById(games[index]->GetRefID()),penaltiesMin,penaltyShots, goals);
+
     }
 }
 

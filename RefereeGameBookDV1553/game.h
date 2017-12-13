@@ -24,6 +24,7 @@ public:
     int GetRefID()const;
     int GetPenaltiesMin()const;
     int Ge*/
+    int GetRefID()const;
 
     void SetRefID(int refID);
     void SetPenaltiesMin(int pMin);
