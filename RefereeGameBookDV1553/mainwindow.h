@@ -1,12 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "referee.h" //bara för test
+
 #include "referees.h" //bara för test
-#include "team.h" //för test
 #include "teams.h" //för test
 #include "refereewindow.h"
 #include"teamwindow.h"
 #include "games.h"
+#include "gamewindow.h"
 
 #include <QMainWindow>
 
@@ -39,12 +39,16 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_pushButton_9_clicked();
+
 private:
     Ui::MainWindow *ui;
     Referees referees;
     RefereeWindow* refereeWindow;
     TeamWindow* teamWindow;
     Teams teams;
+    Games games;
+    GameWindow* gameWindow;
 };
 
 #endif // MAINWINDOW_H

@@ -45,6 +45,41 @@ Referees::~Referees()
 
 }
 
+Referees::Referees(const Referees &other)
+{
+    this->count=other.count;
+    this->capacity=other.capacity;
+    this->referees=new Referee*[this->capacity];
+
+    for(int i=0; i<count; i++)
+    {
+        this->referees[i]= new Referee(*other.referees[i]);
+    }
+
+}
+
+Referees &Referees::operator=(const Referees &other)
+{
+    if(this != &other)
+    {
+        for(int i= 0; i<this->count; i++)
+        {
+            delete this->referees[i];
+        }
+        delete[] this->referees;
+
+        this->count=other.count;
+        this->capacity=other.capacity;
+        this->referees=new Referee*[this->capacity];
+
+        for(int i=0; i<count; i++)
+        {
+            this->referees[i]= new Referee(*other.referees[i]);
+        }
+    }
+    return *this;
+}
+
 bool Referees::AddReferee(const QString &firstName, const QString &surName, int totalPenalties, int totalPenaltyShots, int totalGoals,int refID)
 {
 
@@ -92,6 +127,19 @@ bool Referees::RemoveReferee(const QString &firstName, const QString &surName)
 int Referees::GetNrOfRef() const
 {
     return this->count;
+}
+
+int Referees::RetRefId(const QString &firstName, const QString &surName)
+{
+    int refId=-1;
+    Referee tofind(-1,firstName,surName);
+    int index= FindReferee(tofind);
+    if(index!=-1)
+    {
+        refId=tofind.GetRefID();
+    }
+
+    return refId;
 }
 
 int Referees::FindRefereeById(int refId)

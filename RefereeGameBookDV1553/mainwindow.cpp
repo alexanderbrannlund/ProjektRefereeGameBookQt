@@ -1,18 +1,19 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
-#include "game.h" // för test
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow), games(&referees)
 {
     ui->setupUi(this);
+    referees.ReadFromFile("C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/RefereesTest.txt");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    referees.SaveToFile("C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/RefereesTest.txt");
 }
 
 void MainWindow::on_pushButton_clicked()
@@ -250,4 +251,11 @@ void MainWindow::on_pushButton_8_clicked()
     QMessageBox::information(this,"ToString", refGB.ToStringSaveable());
 
 
+}
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    gameWindow=new GameWindow(&games,&referees,this);
+    hide();
+    gameWindow->show();
 }

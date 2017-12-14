@@ -43,6 +43,40 @@ Teams::~Teams()
     delete[] teams;
 }
 
+Teams::Teams(const Teams &other)
+{
+    this->count=other.count;
+    this->capacity=other.capacity;
+    this->teams=new Team*[this->capacity];
+
+    for(int i=0; i<count; i++)
+    {
+        this->teams[i]= new Team(*other.teams[i]);
+    }
+}
+
+Teams &Teams::operator=(const Teams &other)
+{
+    if(this != &other)
+    {
+        for(int i= 0; i<this->count; i++)
+        {
+            delete this->teams[i];
+        }
+        delete[] this->teams;
+
+        this->count=other.count;
+        this->capacity=other.capacity;
+        this->teams=new Team*[this->capacity];
+
+        for(int i=0; i<count; i++)
+        {
+            this->teams[i]= new Team(*other.teams[i]);
+        }
+    }
+    return *this;
+}
+
 bool Teams::AddTeam(const QString &teamName, const QString &homeArena)
 {
     Team toAdd(teamName,homeArena);

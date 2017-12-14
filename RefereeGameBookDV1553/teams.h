@@ -15,6 +15,9 @@ public:
     Teams();
     ~Teams();
 
+    Teams(const Teams& other);
+    Teams& operator=(const Teams& other);
+
     bool AddTeam(const QString& teamName, const QString& homeArena);
     bool RemoveTeam(const QString& teamName);
     int GetNrOfTeams()const;

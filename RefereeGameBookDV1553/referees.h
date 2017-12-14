@@ -15,9 +15,13 @@ public:
     Referees();
     ~Referees();
 
+    Referees(const Referees& other);
+    Referees& operator=(const Referees& other);
+
     bool AddReferee(const QString& firstName, const QString& surName,int totalPenalties, int totalPenaltyShots,int totalGoals, int refID);
     bool RemoveReferee(const QString& firstName, const QString& surName);
     int GetNrOfRef()const;
+    int RetRefId(const QString& firstName, const QString& surName);
     int FindRefereeById(int refId);
     void AddGameToRef(int index, int addPMin, int addPShot, int addGoals);
 
