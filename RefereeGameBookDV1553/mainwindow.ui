@@ -141,6 +141,29 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuManage_Referees">
+    <property name="title">
+     <string>Manage</string>
+    </property>
+    <addaction name="actionReferees"/>
+    <addaction name="actionTeams"/>
+    <addaction name="actionGames"/>
+   </widget>
+   <widget class="QMenu" name="menuLeaderboards">
+    <property name="title">
+     <string>Leaderboards</string>
+    </property>
+    <addaction name="actionGo_To_Leaderboards"/>
+   </widget>
+   <widget class="QMenu" name="menuQuit">
+    <property name="title">
+     <string>Quit</string>
+    </property>
+    <addaction name="actionQuit_application"/>
+   </widget>
+   <addaction name="menuManage_Referees"/>
+   <addaction name="menuLeaderboards"/>
+   <addaction name="menuQuit"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -149,10 +172,64 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionReferees"/>
+   <addaction name="actionTeams"/>
+   <addaction name="actionGames"/>
+   <addaction name="separator"/>
+   <addaction name="actionGo_To_Leaderboards"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit_application"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionReferees">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/recources/Bilder till projekt/hockey_referee.gif</normaloff>:/recources/Bilder till projekt/hockey_referee.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Referees</string>
+   </property>
+  </action>
+  <action name="actionTeams">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/recources/Bilder till projekt/thPZZ34L5E.jpg</normaloff>:/recources/Bilder till projekt/thPZZ34L5E.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Teams</string>
+   </property>
+  </action>
+  <action name="actionGames">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/recources/Bilder till projekt/Decal-Hockey-0006a.png</normaloff>:/recources/Bilder till projekt/Decal-Hockey-0006a.png</iconset>
+   </property>
+   <property name="text">
+    <string>Games</string>
+   </property>
+  </action>
+  <action name="actionGo_To_Leaderboards">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/recources/Bilder till projekt/leaderboard2.png</normaloff>:/recources/Bilder till projekt/leaderboard2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Go To Leaderboards</string>
+   </property>
+  </action>
+  <action name="actionQuit_application">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/recources/Bilder till projekt/Gtk-quit.svg.png</normaloff>:/recources/Bilder till projekt/Gtk-quit.svg.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit application</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -41,6 +41,14 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void on_actionReferees_triggered();
+
+    void on_actionTeams_triggered();
+
+    void on_actionGames_triggered();
+
+    void on_actionQuit_application_triggered();
+
 private:
     Ui::MainWindow *ui;
     Referees referees;

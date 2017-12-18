@@ -259,3 +259,29 @@ void MainWindow::on_pushButton_9_clicked()
     hide();
     gameWindow->show();
 }
+
+void MainWindow::on_actionReferees_triggered()
+{
+    refereeWindow= new RefereeWindow(&referees,this);
+    hide();
+    refereeWindow->show();
+}
+
+void MainWindow::on_actionTeams_triggered()
+{
+    teamWindow=new TeamWindow(&teams, this);
+    hide();
+    teamWindow->show();
+}
+
+void MainWindow::on_actionGames_triggered()
+{
+    gameWindow=new GameWindow(&games,&referees,this);
+    hide();
+    gameWindow->show();
+}
+
+void MainWindow::on_actionQuit_application_triggered()
+{
+    this->close();
+}

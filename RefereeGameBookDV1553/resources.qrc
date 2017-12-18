@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/recources">
+        <file>Bilder till projekt/add-file.png</file>
+        <file>Bilder till projekt/Decal-Hockey-0006a.png</file>
+        <file>Bilder till projekt/Gtk-quit.svg.png</file>
+        <file>Bilder till projekt/leaderboard2.png</file>
+        <file>Bilder till projekt/hockey_referee.gif</file>
+        <file>Bilder till projekt/thPZZ34L5E.jpg</file>
+    </qresource>
+</RCC>

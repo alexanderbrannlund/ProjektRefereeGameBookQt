@@ -164,6 +164,51 @@ void Referees::AddGameToRef(int index, int addPMin, int addPShot, int addGoals)
     referees[index]->SetTotalGoals(addGoals);
 }
 
+QString Referees::ToStringLbAllPmin() const
+{
+    QString retStr="";
+    QString toString="";
+
+    for(int i=0; i<count; i++)
+    {
+        retStr+= toString.setNum((i+1)) +": \n";
+        retStr+=referees[i]->ToStringLbPmin()+"\n\n";
+    }
+
+
+    return retStr;
+}
+
+QString Referees::ToStringLbAllPShot() const
+{
+    QString retStr="";
+    QString toString="";
+
+    for(int i=0; i<count; i++)
+    {
+        retStr+= toString.setNum((i+1)) +": \n";
+        retStr+=referees[i]->ToStringLbPShot()+"\n\n";
+    }
+
+
+    return retStr;
+}
+
+QString Referees::ToStringLbAllGoals() const
+{
+    QString retStr="";
+    QString toString="";
+
+    for(int i=0; i<count; i++)
+    {
+        retStr+= toString.setNum((i+1)) +": \n";
+        retStr+=referees[i]->ToStringLbGoals()+"\n\n";
+    }
+
+
+    return retStr;
+}
+
 QString Referees::ToStringSaveable() const
 {
    QString retStr="";

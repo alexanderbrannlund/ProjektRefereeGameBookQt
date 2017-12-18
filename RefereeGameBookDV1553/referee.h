@@ -26,6 +26,9 @@ public:
     int GetTotalGoals()const;
     QString ToStringReadable()const;
     QString ToStringSaveable()const;
+    QString ToStringLbPmin() const;
+    QString ToStringLbPShot()const;
+    QString ToStringLbGoals() const;
 
 
     void SetTotalPenalties(int minToAdd);

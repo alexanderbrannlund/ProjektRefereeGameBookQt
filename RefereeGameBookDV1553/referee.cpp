@@ -60,6 +60,36 @@ QString Referee::ToStringSaveable() const
   return ret;
 }
 
+QString Referee::ToStringLbPmin() const
+{
+    QString ret;
+    QString convertInt="";
+
+    ret+= this->firstName+" ";
+    ret+= this->surName+" Total penalty minuts: ";
+    ret+= convertInt.setNum(this->totalPenalties)+"\n";
+}
+
+QString Referee::ToStringLbPShot() const
+{
+    QString ret;
+    QString convertInt="";
+
+    ret+= this->firstName+" ";
+    ret+= this->surName+" Total penalty shots: ";
+    ret+= convertInt.setNum(this->totalPenaltyShots)+"\n";
+}
+
+QString Referee::ToStringLbGoals() const
+{
+    QString ret;
+    QString convertInt="";
+
+    ret+= this->firstName+" ";
+    ret+= this->surName+" Total goals: ";
+    ret+= convertInt.setNum(this->totalGoals)+"\n";
+}
+
 QString Referee::ToStringReadable() const
 {
     QString ret;

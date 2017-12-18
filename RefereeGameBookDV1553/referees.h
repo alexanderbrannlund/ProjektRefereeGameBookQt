@@ -25,6 +25,10 @@ public:
     int FindRefereeById(int refId);
     void AddGameToRef(int index, int addPMin, int addPShot, int addGoals);
 
+    QString ToStringLbAllPmin() const;
+    QString ToStringLbAllPShot() const;
+    QString ToStringLbAllGoals() const;
+
     QString ToStringSaveable()const;
     QString ToStringReadableOne(const QString& firstName, const QString& surName)const;
     QString ToStringReadableAll()const;
