@@ -17,6 +17,7 @@ public:
 
     Referees(const Referees& other);
     Referees& operator=(const Referees& other);
+    Referee& operator[](size_t index);
 
     bool AddReferee(const QString& firstName, const QString& surName,int totalPenalties, int totalPenaltyShots,int totalGoals, int refID);
     bool RemoveReferee(const QString& firstName, const QString& surName);

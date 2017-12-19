@@ -7,6 +7,7 @@
 #include"teamwindow.h"
 #include "games.h"
 #include "gamewindow.h"
+#include "leaderboards.h"
 
 #include <QMainWindow>
 
@@ -48,6 +49,8 @@ private slots:
     void on_actionGames_triggered();
 
     void on_actionQuit_application_triggered();
+
+    void on_pushButton_10_clicked();
 
 private:
     Ui::MainWindow *ui;

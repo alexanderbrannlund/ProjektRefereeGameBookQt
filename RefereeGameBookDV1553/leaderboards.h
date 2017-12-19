@@ -9,27 +9,27 @@ class Leaderboards
 private:
     Referees referees;
     Games games;
-    Teams teams;
+    //Teams teams;
 
 public:
-    Leaderboards(Referees referees, Games games, Team teams);
+    Leaderboards(Referees referees, Games games);
     ~Leaderboards();
 
-    void SortRefereesByPMin(Referees* referees);
-    void SortRefereesByPShots(Referees* referees);
-    void SortRefereesByGoals(Referees* referees);
+    void SortRefereesByPMin(Referees* referees)const;
+    void SortRefereesByPShots(Referees* referees)const;
+    void SortRefereesByGoals(Referees* referees)const;
 
-    QString ShowAllseasonLbByMin()const;
+    QString ShowAllseasonLbByMin();
     QString ShowMontlyLbByMin(int month)const;
 
-    QString ShowAllseasonLbByPShots()const;
+    QString ShowAllseasonLbByPShots();
     QString ShowMontlyLbByPShots(int month)const;
 
-    QString ShowAllseasonLbByGoals()const;
+    QString ShowAllseasonLbByGoals();
     QString ShowMontlyLbByGoals(int month)const;
 
     //void SaveAllLeaderboardsToFile(const QString& fileName)const;
-    void SaveLeaderboardsToFile(int saveingAlt, const QString& fileName, int date=0)const;
+    void SaveLeaderboardsToFile(int saveingAlt, const QString& fileName, int date=0);
 };
 
 #endif // LEADERBOARDS_H

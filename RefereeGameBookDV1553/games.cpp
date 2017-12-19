@@ -51,6 +51,7 @@ Games::Games(const Games &other)
     this->count=other.count;
     this->capacity=other.capacity;
     this->games=new Game*[this->capacity];
+    this->referees=other.referees;
 
     for(int i=0; i<count; i++)
     {
@@ -71,6 +72,7 @@ Games &Games::operator=(const Games &other)
         this->count=other.count;
         this->capacity=other.capacity;
         this->games=new Game*[this->capacity];
+        this->referees=other.referees;
 
         for(int i=0; i<count; i++)
         {
@@ -197,7 +199,7 @@ int Games::GetMonthlyGoals(int refID, int month) const
     return goalsCount;
 }
 
-std::vector<PenaltyInfo> Games::GetMonthlyPMin(int month)
+std::vector<PenaltyInfo> Games::GetMonthlyPMin(int month)const
 {
     std::vector<PenaltyInfo> pVec;
 
@@ -226,7 +228,7 @@ std::vector<PenaltyInfo> Games::GetMonthlyPMin(int month)
     return pVec;
 }
 
-std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(int month)
+std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(int month)const
 {
     std::vector<PenaltyShotInfo> pSVec;
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
@@ -254,7 +256,7 @@ std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(int month)
     return pSVec;
 }
 
-std::vector<GoalsInfo> Games::GetMonthlyGoals(int month)
+std::vector<GoalsInfo> Games::GetMonthlyGoals(int month)const
 {
     std::vector<GoalsInfo> gVec;
     for(int i=0; i<referees->GetNrOfRef()-1; i++)

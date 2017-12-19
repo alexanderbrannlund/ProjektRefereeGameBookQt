@@ -80,6 +80,11 @@ Referees &Referees::operator=(const Referees &other)
     return *this;
 }
 
+Referee &Referees::operator[](size_t index)
+{
+    return *(referees[index]);
+}
+
 bool Referees::AddReferee(const QString &firstName, const QString &surName, int totalPenalties, int totalPenaltyShots, int totalGoals,int refID)
 {
 

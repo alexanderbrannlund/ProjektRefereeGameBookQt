@@ -68,6 +68,8 @@ QString Referee::ToStringLbPmin() const
     ret+= this->firstName+" ";
     ret+= this->surName+" Total penalty minuts: ";
     ret+= convertInt.setNum(this->totalPenalties)+"\n";
+
+    return ret;
 }
 
 QString Referee::ToStringLbPShot() const
@@ -78,6 +80,8 @@ QString Referee::ToStringLbPShot() const
     ret+= this->firstName+" ";
     ret+= this->surName+" Total penalty shots: ";
     ret+= convertInt.setNum(this->totalPenaltyShots)+"\n";
+
+    return ret;
 }
 
 QString Referee::ToStringLbGoals() const
@@ -88,6 +92,8 @@ QString Referee::ToStringLbGoals() const
     ret+= this->firstName+" ";
     ret+= this->surName+" Total goals: ";
     ret+= convertInt.setNum(this->totalGoals)+"\n";
+
+    return ret;
 }
 
 QString Referee::ToStringReadable() const

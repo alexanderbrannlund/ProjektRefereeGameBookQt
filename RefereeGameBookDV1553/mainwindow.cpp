@@ -285,3 +285,30 @@ void MainWindow::on_actionQuit_application_triggered()
 {
     this->close();
 }
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    Games refGB(&referees);
+    refGB.AddGame("Home","Guest", QDate::currentDate(),0,0,0,0);
+    refGB.AddGame("Home2","Guest", QDate::currentDate(),1,0,0,0);
+    refGB.AddGame("Home3","Guest", QDate::currentDate(),2,0,0,0);
+    refGB.AddGame("Home4","Guest", QDate::currentDate(),3,0,0,0);
+    refGB.AddGoalsAndPenalties("home", "Guest",QDate::currentDate(),20,2,4 );
+    refGB.AddGoalsAndPenalties("home2", "Guest",QDate::currentDate(),10,3,2 );
+    refGB.AddGoalsAndPenalties("home3", "Guest",QDate::currentDate(),22,2,8 );
+    refGB.AddGoalsAndPenalties("home4", "Guest",QDate::currentDate(),19,5,0 );
+   Leaderboards lb(referees,games);
+
+   QMessageBox::information(this, "TestLeaderboards", lb.ShowAllseasonLbByMin());
+   QMessageBox::information(this, "TestLeaderboards", lb.ShowAllseasonLbByPShots());
+   QMessageBox::information(this, "TestLeaderboards", lb.ShowAllseasonLbByGoals());
+   QMessageBox::information(this, "TestLeaderboards", lb.ShowMontlyLbByMin(12));
+   QMessageBox::information(this, "TestLeaderboards", lb.ShowMontlyLbByPShots(12));
+   QMessageBox::information(this, "TestLeaderboards", lb.ShowMontlyLbByGoals(12));
+
+   QMessageBox::information(this, "TestLeaderboards spara till fil", "Sparar");
+
+   lb.SaveLeaderboardsToFile(1,"C:/Users/brann/Projekt i DV1553/ProjektRefereeGameBookQt/RefereeGameBookDV1553/LeaderboardsTest.txt",12);
+
+
+}

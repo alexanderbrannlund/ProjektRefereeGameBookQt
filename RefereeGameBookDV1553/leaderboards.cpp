@@ -3,10 +3,10 @@
 #include <QTextStream>
 
 
-Leaderboards::Leaderboards(Referees referees, Games games, Team teams): games(games)
+Leaderboards::Leaderboards(Referees referees, Games games): games(games)
 {
     this->referees=referees;
-    this->teams=teams;
+
 }
 
 Leaderboards::~Leaderboards()
@@ -14,7 +14,7 @@ Leaderboards::~Leaderboards()
 
 }
 
-void Leaderboards::SortRefereesByPMin(Referees *referees)
+void Leaderboards::SortRefereesByPMin(Referees *referees)const
 {
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
     {
@@ -27,12 +27,12 @@ void Leaderboards::SortRefereesByPMin(Referees *referees)
                 smallestIndex=k;
             }
         }
-        std::swap(referees[smallestIndex], referees[i]);
+        std::swap((*referees)[smallestIndex], (*referees)[i]);
     }
 
 }
 
-void Leaderboards::SortRefereesByPShots(Referees *referees)
+void Leaderboards::SortRefereesByPShots(Referees *referees)const
 {
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
     {
@@ -45,12 +45,12 @@ void Leaderboards::SortRefereesByPShots(Referees *referees)
                 smallestIndex=k;
             }
         }
-        std::swap(referees[smallestIndex], referees[i]);
+        std::swap((*referees)[smallestIndex], (*referees)[i]);
     }
 
 }
 
-void Leaderboards::SortRefereesByGoals(Referees *referees)
+void Leaderboards::SortRefereesByGoals(Referees *referees)const
 {
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
     {
@@ -63,17 +63,17 @@ void Leaderboards::SortRefereesByGoals(Referees *referees)
                 smallestIndex=k;
             }
         }
-        std::swap(referees[smallestIndex], referees[i]);
+        std::swap((*referees)[smallestIndex], (*referees)[i]);
     }
 
 }
 
-QString Leaderboards::ShowAllseasonLbByMin() const
+QString Leaderboards::ShowAllseasonLbByMin()
 {
     QString retString="All season Leaderbord by penalty minuts: \n\n";
 
 
-    SortRefereesByPMin(&this->referees);
+    SortRefereesByPMin(&referees);
 
     retString+=referees.ToStringLbAllPmin();
 
@@ -91,8 +91,8 @@ QString Leaderboards::ShowMontlyLbByMin(int month) const
     for(int i=0; i<pVec.size(); i++)
     {
         int index=referees.FindRefereeById(pVec[i].refID);
-        retString+=referees.ToStringForGame(index)+ "n";
-        retString+="Penalty minuts: " + toString.setNum(pVec[i].totalPenatlies);
+        retString+=referees.ToStringForGame(index)+ "\n";
+        retString+="Penalty minuts: " + toString.setNum(pVec[i].totalPenatlies)+"\n\n";
     }
 
     return retString;
@@ -100,12 +100,12 @@ QString Leaderboards::ShowMontlyLbByMin(int month) const
 
 }
 
-QString Leaderboards::ShowAllseasonLbByPShots() const
+QString Leaderboards::ShowAllseasonLbByPShots()
 {
     QString retString="All season Leaderbord by penalty shots: \n\n";
 
 
-    SortRefereesByPShots(&this->referees);
+    SortRefereesByPShots(&referees);
 
     retString+=referees.ToStringLbAllPShot();
 
@@ -123,20 +123,20 @@ QString Leaderboards::ShowMontlyLbByPShots(int month) const
     for(int i=0; i<pSVec.size(); i++)
     {
         int index=referees.FindRefereeById(pSVec[i].refId);
-        retString+=referees.ToStringForGame(index)+ "n";
-        retString+="Penalty shots: " + toString.setNum(pSVec[i].totalPShots);
+        retString+=referees.ToStringForGame(index)+ "\n";
+        retString+="Penalty shots: " + toString.setNum(pSVec[i].totalPShots)+"\n\n";
     }
 
     return retString;
 
 }
 
-QString Leaderboards::ShowAllseasonLbByGoals() const
+QString Leaderboards::ShowAllseasonLbByGoals()
 {
     QString retString="All season Leaderbord by goals: \n\n";
 
 
-    SortRefereesByGoals(&this->referees);
+    SortRefereesByGoals(&referees);
 
     retString+=referees.ToStringLbAllGoals();
 
@@ -154,15 +154,15 @@ QString Leaderboards::ShowMontlyLbByGoals(int month) const
     for(int i=0; i<gVec.size(); i++)
     {
         int index=referees.FindRefereeById(gVec[i].refId);
-        retString+=referees.ToStringForGame(index)+ "n";
-        retString+="Goals: " + toString.setNum(gVec[i].totalGoals);
+        retString+=referees.ToStringForGame(index)+ "\n";
+        retString+="Goals: " + toString.setNum(gVec[i].totalGoals)+"\n\n";
     }
 
     return retString;
 
 }
 
-void Leaderboards::SaveLeaderboardsToFile(int saveingAlt,const QString &fileName, int date) const
+void Leaderboards::SaveLeaderboardsToFile(int saveingAlt,const QString &fileName, int date)
 {
     QFile file(fileName);
     if(!file.open(QFile::WriteOnly | QFile::Text))

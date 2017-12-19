@@ -48,9 +48,9 @@ public:
     int GetMonthlyPShot(int refID, int month)const;
     int GetMonthlyGoals(int refID, int month)const;
 
-    std::vector<PenaltyInfo> GetMonthlyPMin(int month);
-    std::vector<PenaltyShotInfo> GetMonthlyPShot(int month);
-    std::vector<GoalsInfo> GetMonthlyGoals(int month);
+    std::vector<PenaltyInfo> GetMonthlyPMin(int month)const;
+    std::vector<PenaltyShotInfo> GetMonthlyPShot(int month)const;
+    std::vector<GoalsInfo> GetMonthlyGoals(int month)const;
 
     QString ToStringSaveable()const;
     QString ToStringReadableOne(const QString& homeTeam, const QString& guestTeam, QDate date)const;
