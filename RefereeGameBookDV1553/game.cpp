@@ -18,6 +18,26 @@ Game::~Game()
     //Empty
 }
 
+int Game::GetPenaltiesMin() const
+{
+    return this->penaltiesMin;
+}
+
+int Game::GetPenaltyShots() const
+{
+    return this->penaltyShots;
+}
+
+int Game::GetGoals() const
+{
+    return this->goals;
+}
+
+QDate Game::GetDate()
+{
+    return this->date;
+}
+
 int Game::GetRefID() const
 {
     return this->refID;

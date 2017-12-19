@@ -21,9 +21,14 @@ public:
     bool AddReferee(const QString& firstName, const QString& surName,int totalPenalties, int totalPenaltyShots,int totalGoals, int refID);
     bool RemoveReferee(const QString& firstName, const QString& surName);
     int GetNrOfRef()const;
-    int RetRefId(const QString& firstName, const QString& surName);
-    int FindRefereeById(int refId);
+    int RetRefId(const QString& firstName, const QString& surName)const;
+    int FindRefereeById(int refId)const;
     void AddGameToRef(int index, int addPMin, int addPShot, int addGoals);
+    int GetPminAtIndex(int index)const;
+    int GetPShotAtIndex(int index)const;
+    int GetGoalsAtIndex(int index)const;
+    int GetRefId(int index)const;
+
 
     QString ToStringLbAllPmin() const;
     QString ToStringLbAllPShot() const;

@@ -46,6 +46,40 @@ Games::~Games()
     delete[] games;
 }
 
+Games::Games(const Games &other)
+{
+    this->count=other.count;
+    this->capacity=other.capacity;
+    this->games=new Game*[this->capacity];
+
+    for(int i=0; i<count; i++)
+    {
+        this->games[i]= new Game(*other.games[i]);
+    }
+}
+
+Games &Games::operator=(const Games &other)
+{
+    if(this != &other)
+    {
+        for(int i= 0; i<this->count; i++)
+        {
+            delete this->games[i];
+        }
+        delete[] this->games;
+
+        this->count=other.count;
+        this->capacity=other.capacity;
+        this->games=new Game*[this->capacity];
+
+        for(int i=0; i<count; i++)
+        {
+            this->games[i]= new Game(*other.games[i]);
+        }
+    }
+    return *this;
+}
+
 bool Games::AddGame(const QString &homeTeam, const QString &guestTeam, QDate date, int refID, int penaltiesMin, int penaltyShots, int goals)
 {
     Game toAdd(homeTeam, guestTeam, date, refID,penaltiesMin,penaltyShots, goals);
@@ -113,6 +147,139 @@ void Games::ChangeReferee(const QString &homeTeam, const QString &guestTeam, QDa
 int Games::GetNrOfGames() const
 {
     return this->count;
+}
+
+int Games::GetMonthlyPMin(int refID, int month) const
+{
+   int pMinCount=0;
+   for(int i=0; i<count; i++)
+   {
+       if(games[i]->GetDate().month()==month)
+       {
+           if(games[i]->GetRefID()==refID)
+           {
+               pMinCount+=games[i]->GetPenaltiesMin();
+           }
+       }
+   }
+   return pMinCount;
+}
+
+int Games::GetMonthlyPShot(int refID, int month) const
+{
+    int pShotCount=0;
+    for(int i=0; i<count; i++)
+    {
+        if(games[i]->GetDate().month()==month)
+        {
+            if(games[i]->GetRefID()==refID)
+            {
+                pShotCount+=games[i]->GetPenaltyShots();
+            }
+        }
+    }
+    return pShotCount;
+}
+
+int Games::GetMonthlyGoals(int refID, int month) const
+{
+    int goalsCount=0;
+    for(int i=0; i<count; i++)
+    {
+        if(games[i]->GetDate().month()==month)
+        {
+            if(games[i]->GetRefID()==refID)
+            {
+                goalsCount+=games[i]->GetGoals();
+            }
+        }
+    }
+    return goalsCount;
+}
+
+std::vector<PenaltyInfo> Games::GetMonthlyPMin(int month)
+{
+    std::vector<PenaltyInfo> pVec;
+
+    for(int i=0; i<referees->GetNrOfRef()-1; i++)
+    {
+        int refid=referees->GetRefId(i);
+        int pMin=GetMonthlyPMin(refid,month);
+        PenaltyInfo ref;
+        ref.refID=refid;
+        ref.totalPenatlies=pMin;
+
+        pVec.push_back(ref);
+    }
+    for(int i=0; i<pVec.size()-1; i++)
+    {
+        int smallestIndex=i;
+        for(int k=i; k<pVec.size(); k++)
+        {
+            if(pVec[k].totalPenatlies<pVec[smallestIndex].totalPenatlies)
+            {
+                smallestIndex=k;
+            }
+        }
+        std::swap(pVec[smallestIndex],pVec[i]);
+    }
+    return pVec;
+}
+
+std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(int month)
+{
+    std::vector<PenaltyShotInfo> pSVec;
+    for(int i=0; i<referees->GetNrOfRef()-1; i++)
+    {
+        int refid=referees->GetRefId(i);
+        int pShots=GetMonthlyPShot(refid,month);
+        PenaltyShotInfo ref;
+        ref.refId=refid;
+        ref.totalPShots=pShots;
+
+        pSVec.push_back(ref);
+    }
+    for(int i=0; i<pSVec.size()-1; i++)
+    {
+        int smallestIndex=i;
+        for(int k=i; k<pSVec.size(); k++)
+        {
+            if(pSVec[k].totalPShots<pSVec[smallestIndex].totalPShots)
+            {
+                smallestIndex=k;
+            }
+        }
+        std::swap(pSVec[smallestIndex],pSVec[i]);
+    }
+    return pSVec;
+}
+
+std::vector<GoalsInfo> Games::GetMonthlyGoals(int month)
+{
+    std::vector<GoalsInfo> gVec;
+    for(int i=0; i<referees->GetNrOfRef()-1; i++)
+    {
+        int refid=referees->GetRefId(i);
+        int goals=GetMonthlyGoals(refid,month);
+        GoalsInfo ref;
+        ref.refId=refid;
+        ref.totalGoals=goals;
+
+        gVec.push_back(ref);
+    }
+    for(int i=0; i<gVec.size()-1; i++)
+    {
+        int smallestIndex=i;
+        for(int k=i; k<gVec.size(); k++)
+        {
+            if(gVec[k].totalGoals<gVec[smallestIndex].totalGoals)
+            {
+                smallestIndex=k;
+            }
+        }
+        std::swap(gVec[smallestIndex],gVec[i]);
+    }
+    return gVec;
 }
 
 QString Games::ToStringSaveable() const

@@ -129,7 +129,7 @@ int Referees::GetNrOfRef() const
     return this->count;
 }
 
-int Referees::RetRefId(const QString &firstName, const QString &surName)
+int Referees::RetRefId(const QString &firstName, const QString &surName)const
 {
     int refId=-1;
     Referee tofind(-1,firstName,surName);
@@ -142,7 +142,7 @@ int Referees::RetRefId(const QString &firstName, const QString &surName)
     return refId;
 }
 
-int Referees::FindRefereeById(int refId)
+int Referees::FindRefereeById(int refId) const
 {
     int index;
     for(int i=0; i<count; i++)
@@ -162,6 +162,26 @@ void Referees::AddGameToRef(int index, int addPMin, int addPShot, int addGoals)
     referees[index]->SetTotalPenalties(addPMin);
     referees[index]->SetTotalPenaltyShots(addPShot);
     referees[index]->SetTotalGoals(addGoals);
+}
+
+int Referees::GetPminAtIndex(int index)const
+{
+    return referees[index]->GetTotalPenalties();
+}
+
+int Referees::GetPShotAtIndex(int index) const
+{
+    return referees[index]->GetTotalPenaltyShots();
+}
+
+int Referees::GetGoalsAtIndex(int index) const
+{
+    return referees[index]->GetTotalGoals();
+}
+
+int Referees::GetRefId(int index) const
+{
+    return referees[index]->GetRefID();
 }
 
 QString Referees::ToStringLbAllPmin() const
