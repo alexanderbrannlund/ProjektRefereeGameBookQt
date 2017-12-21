@@ -1,0 +1,105 @@
+dec:s Leaderbord by penalty minuts: 
+
+Jim Berqvist
+Penalty minuts: 0
+
+Robert Woodbridge
+Penalty minuts: 0
+
+Kristoffer Folkstrand
+Penalty minuts: 0
+
+David Gustafsson
+Penalty minuts: 0
+
+Daniel Lidgren
+Penalty minuts: 0
+
+Morgan Claesson
+Penalty minuts: 0
+
+Filip Eriksson
+Penalty minuts: 0
+
+André Hiljanen
+Penalty minuts: 0
+
+Johan Magnusson
+Penalty minuts: 0
+
+Sebastian Virta
+Penalty minuts: 0
+
+
+
+
+dec:s Leaderbord by penalty shots: 
+
+Jim Berqvist
+Penalty shots: 0
+
+Robert Woodbridge
+Penalty shots: 0
+
+Kristoffer Folkstrand
+Penalty shots: 0
+
+David Gustafsson
+Penalty shots: 0
+
+Daniel Lidgren
+Penalty shots: 0
+
+Morgan Claesson
+Penalty shots: 0
+
+Filip Eriksson
+Penalty shots: 0
+
+André Hiljanen
+Penalty shots: 0
+
+Johan Magnusson
+Penalty shots: 0
+
+Sebastian Virta
+Penalty shots: 0
+
+
+
+
+dec:s Leaderbord by penalty minuts: 
+
+Jim Berqvist
+Goals: 0
+
+Robert Woodbridge
+Goals: 0
+
+Kristoffer Folkstrand
+Goals: 0
+
+David Gustafsson
+Goals: 0
+
+Daniel Lidgren
+Goals: 0
+
+Morgan Claesson
+Goals: 0
+
+Filip Eriksson
+Goals: 0
+
+André Hiljanen
+Goals: 0
+
+Johan Magnusson
+Goals: 0
+
+Sebastian Virta
+Goals: 0
+
+
+
+

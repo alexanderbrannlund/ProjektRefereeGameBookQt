@@ -49,7 +49,7 @@ void TeamWindow::on_pushButton_Show_clicked()
     if(ui->radioButton_showAll->isChecked())
     {
        QString print= teams->ToStringReadableAll();
-       ui->textEdit->setText(print);
+       ui->textBrowser->setText(print);
        ui->radioButton_showAll->setAutoExclusive(false);
        ui->radioButton_showAll->setChecked(false);
        ui->radioButton_showAll->setAutoExclusive(true);
@@ -63,7 +63,7 @@ void TeamWindow::on_pushButton_Show_clicked()
 
         if(print!="Does not exist")
         {
-            ui->textEdit->setText(print);
+            ui->textBrowser->setText(print);
         }
 
         else

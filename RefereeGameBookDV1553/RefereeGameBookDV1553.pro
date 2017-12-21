@@ -35,7 +35,8 @@ SOURCES += \
     game.cpp \
     games.cpp \
     gamewindow.cpp \
-    leaderboards.cpp
+    leaderboards.cpp \
+    leaderbordswindow.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -48,13 +49,15 @@ HEADERS += \
     game.h \
     games.h \
     gamewindow.h \
-    leaderboards.h
+    leaderboards.h \
+    leaderbordswindow.h
 
 FORMS += \
         mainwindow.ui \
     refereewindow.ui \
     teamwindow.ui \
-    gamewindow.ui
+    gamewindow.ui \
+    leaderbordswindow.ui
 
 RESOURCES += \
     resources.qrc

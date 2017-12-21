@@ -2,9 +2,9 @@
 0
 Jim
 Berqvist
-0
-0
-0
+10
+3
+7
 1
 Robert
 Woodbridge

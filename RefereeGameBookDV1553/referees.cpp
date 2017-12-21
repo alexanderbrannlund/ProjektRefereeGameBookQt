@@ -141,7 +141,7 @@ int Referees::RetRefId(const QString &firstName, const QString &surName)const
     int index= FindReferee(tofind);
     if(index!=-1)
     {
-        refId=tofind.GetRefID();
+        refId=referees[index]->GetRefID();
     }
 
     return refId;

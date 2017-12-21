@@ -18,17 +18,18 @@ void Leaderboards::SortRefereesByPMin(Referees *referees)const
 {
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
     {
-        int smallestIndex=i;
+        int highestIndex=i;
 
         for(int k=i+1; k<referees->GetNrOfRef(); k++)
         {
-            if(referees->GetPminAtIndex(i)<referees->GetPminAtIndex(smallestIndex))
+            if(referees->GetPminAtIndex(k)>referees->GetPminAtIndex(highestIndex))
             {
-                smallestIndex=k;
+                highestIndex=k;
             }
         }
-        std::swap((*referees)[smallestIndex], (*referees)[i]);
+        std::swap((*referees)[highestIndex], (*referees)[i]);
     }
+
 
 }
 
@@ -36,16 +37,16 @@ void Leaderboards::SortRefereesByPShots(Referees *referees)const
 {
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
     {
-        int smallestIndex=i;
+        int highestIndex=i;
 
         for(int k=i+1; k<referees->GetNrOfRef(); k++)
         {
-            if(referees->GetPShotAtIndex(i)<referees->GetPShotAtIndex(smallestIndex))
+            if(referees->GetPShotAtIndex(k)>referees->GetPShotAtIndex(highestIndex))
             {
-                smallestIndex=k;
+                highestIndex=k;
             }
         }
-        std::swap((*referees)[smallestIndex], (*referees)[i]);
+        std::swap((*referees)[highestIndex], (*referees)[i]);
     }
 
 }
@@ -54,16 +55,16 @@ void Leaderboards::SortRefereesByGoals(Referees *referees)const
 {
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
     {
-        int smallestIndex=i;
+        int highestIndex=i;
 
         for(int k=i+1; k<referees->GetNrOfRef(); k++)
         {
-            if(referees->GetGoalsAtIndex(i)<referees->GetGoalsAtIndex(smallestIndex))
+            if(referees->GetGoalsAtIndex(k)>referees->GetGoalsAtIndex(highestIndex))
             {
-                smallestIndex=k;
+                highestIndex=k;
             }
         }
-        std::swap((*referees)[smallestIndex], (*referees)[i]);
+        std::swap((*referees)[highestIndex], (*referees)[i]);
     }
 
 }
@@ -80,12 +81,10 @@ QString Leaderboards::ShowAllseasonLbByMin()
     return retString;
 }
 
-QString Leaderboards::ShowMontlyLbByMin(int month) const
+QString Leaderboards::ShowMontlyLbByMin(QDate month) const
 {
-    QDate date;
-    date.shortMonthName(month);
     QString toString="";
-    QString retString=date.toString("MMM")+ ":s Leaderbord by penalty minuts: \n\n";
+    QString retString=month.toString("MMM")+ ":s Leaderbord by penalty minuts: \n\n";
 
     std::vector<PenaltyInfo> pVec=games.GetMonthlyPMin(month);
     for(int i=0; i<pVec.size(); i++)
@@ -112,12 +111,10 @@ QString Leaderboards::ShowAllseasonLbByPShots()
     return retString;
 }
 
-QString Leaderboards::ShowMontlyLbByPShots(int month) const
+QString Leaderboards::ShowMontlyLbByPShots(QDate month) const
 {
-    QDate date;
-    date.shortMonthName(month);
     QString toString="";
-    QString retString=date.toString("MMM")+ ":s Leaderbord by penalty shots: \n\n";
+    QString retString=month.toString("MMM")+ ":s Leaderbord by penalty shots: \n\n";
 
     std::vector<PenaltyShotInfo> pSVec=games.GetMonthlyPShot(month);
     for(int i=0; i<pSVec.size(); i++)
@@ -143,12 +140,11 @@ QString Leaderboards::ShowAllseasonLbByGoals()
     return retString;
 }
 
-QString Leaderboards::ShowMontlyLbByGoals(int month) const
+QString Leaderboards::ShowMontlyLbByGoals(QDate month) const
 {
-    QDate date;
-    date.shortMonthName(month);
+
     QString toString="";
-    QString retString=date.toString("MMM")+ ":s Leaderbord by penalty minuts: \n\n";
+    QString retString=month.toString("MMM")+ ":s Leaderbord by penalty minuts: \n\n";
 
     std::vector<GoalsInfo> gVec=games.GetMonthlyGoals(month);
     for(int i=0; i<gVec.size(); i++)
@@ -162,7 +158,7 @@ QString Leaderboards::ShowMontlyLbByGoals(int month) const
 
 }
 
-void Leaderboards::SaveLeaderboardsToFile(int saveingAlt,const QString &fileName, int date)
+void Leaderboards::SaveLeaderboardsToFile(int saveingAlt,const QString &fileName, QDate date)
 {
     QFile file(fileName);
     if(!file.open(QFile::WriteOnly | QFile::Text))

@@ -1,19 +1,19 @@
 All season Leaderbord by penalty minuts: 
 
 1: 
-Jim Berqvist Total penalty minuts: 0
+Kristoffer Folkstrand Total penalty minuts: 44
 
 
 2: 
-Robert Woodbridge Total penalty minuts: 0
+Jim Berqvist Total penalty minuts: 40
 
 
 3: 
-Kristoffer Folkstrand Total penalty minuts: 0
+David Gustafsson Total penalty minuts: 38
 
 
 4: 
-David Gustafsson Total penalty minuts: 0
+Robert Woodbridge Total penalty minuts: 20
 
 
 5: 
@@ -50,19 +50,19 @@ Alexander Österberg Total penalty minuts: 0
 All season Leaderbord by penalty shots: 
 
 1: 
-Jim Berqvist Total penalty shots: 0
+David Gustafsson Total penalty shots: 10
 
 
 2: 
-Robert Woodbridge Total penalty shots: 0
+Robert Woodbridge Total penalty shots: 6
 
 
 3: 
-Kristoffer Folkstrand Total penalty shots: 0
+Kristoffer Folkstrand Total penalty shots: 4
 
 
 4: 
-David Gustafsson Total penalty shots: 0
+Jim Berqvist Total penalty shots: 4
 
 
 5: 
@@ -99,47 +99,58 @@ Alexander Österberg Total penalty shots: 0
 All season Leaderbord by goals: 
 
 1: 
-Jim Berqvist Total goals: 0
+Kristoffer Folkstrand 
+Total goals: 16
 
 
 2: 
-Robert Woodbridge Total goals: 0
+Jim Berqvist 
+Total goals: 8
 
 
 3: 
-Kristoffer Folkstrand Total goals: 0
+Robert Woodbridge 
+Total goals: 4
 
 
 4: 
-David Gustafsson Total goals: 0
+David Gustafsson 
+Total goals: 0
 
 
 5: 
-Daniel Lidgren Total goals: 0
+Daniel Lidgren 
+Total goals: 0
 
 
 6: 
-Morgan Claesson Total goals: 0
+Morgan Claesson 
+Total goals: 0
 
 
 7: 
-Filip Eriksson Total goals: 0
+Filip Eriksson 
+Total goals: 0
 
 
 8: 
-André Hiljanen Total goals: 0
+André Hiljanen 
+Total goals: 0
 
 
 9: 
-Johan Magnusson Total goals: 0
+Johan Magnusson 
+Total goals: 0
 
 
 10: 
-Sebastian Virta Total goals: 0
+Sebastian Virta 
+Total goals: 0
 
 
 11: 
-Alexander Österberg Total goals: 0
+Alexander Österberg 
+Total goals: 0
 
 
 

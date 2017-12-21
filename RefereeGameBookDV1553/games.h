@@ -44,13 +44,13 @@ public:
     void AddGoalsAndPenalties(const QString &homeTeam, const QString &guestTeam, QDate date, int penaltiesMin,int penaltyShots, int goals);
     void ChangeReferee(const QString &homeTeam, const QString &guestTeam, QDate date,int refId);
     int GetNrOfGames()const;
-    int GetMonthlyPMin(int refID, int month)const;
-    int GetMonthlyPShot(int refID, int month)const;
-    int GetMonthlyGoals(int refID, int month)const;
+    int GetMonthlyPMin(int refID, QDate month)const;
+    int GetMonthlyPShot(int refID, QDate month)const;
+    int GetMonthlyGoals(int refID, QDate month)const;
 
-    std::vector<PenaltyInfo> GetMonthlyPMin(int month)const;
-    std::vector<PenaltyShotInfo> GetMonthlyPShot(int month)const;
-    std::vector<GoalsInfo> GetMonthlyGoals(int month)const;
+    std::vector<PenaltyInfo> GetMonthlyPMin(QDate month)const;
+    std::vector<PenaltyShotInfo> GetMonthlyPShot(QDate month)const;
+    std::vector<GoalsInfo> GetMonthlyGoals(QDate month)const;
 
     QString ToStringSaveable()const;
     QString ToStringReadableOne(const QString& homeTeam, const QString& guestTeam, QDate date)const;

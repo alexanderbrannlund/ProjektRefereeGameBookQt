@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>300</x>
      <y>10</y>
      <width>101</width>
      <height>41</height>
@@ -35,7 +35,7 @@
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>170</y>
+     <y>220</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -47,8 +47,8 @@
   <widget class="QPushButton" name="pushButton_Remove">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>290</y>
+     <x>210</x>
+     <y>320</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -57,21 +57,11 @@
     <string>Remove</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>60</y>
-     <width>261</width>
-     <height>371</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_Show">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>460</y>
+     <x>150</x>
+     <y>470</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -93,11 +83,11 @@
     <string>Go back to start</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>80</y>
+     <x>20</x>
+     <y>130</y>
      <width>225</width>
      <height>83</height>
     </rect>
@@ -145,11 +135,11 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>230</y>
+     <x>20</x>
+     <y>260</y>
      <width>260</width>
      <height>55</height>
     </rect>
@@ -183,11 +173,11 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>350</y>
+     <x>20</x>
+     <y>360</y>
      <width>202</width>
      <height>101</height>
     </rect>
@@ -248,7 +238,57 @@
     </item>
    </layout>
   </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>90</y>
+     <width>321</width>
+     <height>421</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>111</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/recources/Bilder till projekt/thJ20O2MMZ.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>10</y>
+     <width>101</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/recources/Bilder till projekt/5511133955_de627d006a_z.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

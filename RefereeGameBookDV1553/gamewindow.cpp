@@ -94,7 +94,7 @@ void GameWindow::on_pushButton_show_clicked()
     if(ui->radioButton_showAll->isChecked())
     {
        QString print= games->ToStringReadableAll();
-       ui->textEdit->setText(print);
+       ui->textBrowser->setText(print);
        ui->radioButton_showAll->setAutoExclusive(false);
        ui->radioButton_showAll->setChecked(false);
        ui->radioButton_showAll->setAutoExclusive(true);
@@ -110,7 +110,7 @@ void GameWindow::on_pushButton_show_clicked()
 
         if(print!="Does not exist")
         {
-            ui->textEdit->setText(print);
+            ui->textBrowser->setText(print);
         }
 
         else

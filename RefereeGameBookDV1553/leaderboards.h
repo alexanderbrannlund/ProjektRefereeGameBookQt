@@ -20,16 +20,16 @@ public:
     void SortRefereesByGoals(Referees* referees)const;
 
     QString ShowAllseasonLbByMin();
-    QString ShowMontlyLbByMin(int month)const;
+    QString ShowMontlyLbByMin(QDate month)const;
 
     QString ShowAllseasonLbByPShots();
-    QString ShowMontlyLbByPShots(int month)const;
+    QString ShowMontlyLbByPShots(QDate month)const;
 
     QString ShowAllseasonLbByGoals();
-    QString ShowMontlyLbByGoals(int month)const;
+    QString ShowMontlyLbByGoals(QDate month)const;
 
     //void SaveAllLeaderboardsToFile(const QString& fileName)const;
-    void SaveLeaderboardsToFile(int saveingAlt, const QString& fileName, int date=0);
+    void SaveLeaderboardsToFile(int saveingAlt, const QString& fileName, QDate date=QDate());
 };
 
 #endif // LEADERBOARDS_H

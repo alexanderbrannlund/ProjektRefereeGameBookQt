@@ -151,12 +151,12 @@ int Games::GetNrOfGames() const
     return this->count;
 }
 
-int Games::GetMonthlyPMin(int refID, int month) const
+int Games::GetMonthlyPMin(int refID, QDate month) const
 {
    int pMinCount=0;
    for(int i=0; i<count; i++)
    {
-       if(games[i]->GetDate().month()==month)
+       if(games[i]->GetDate().month()==month.month())
        {
            if(games[i]->GetRefID()==refID)
            {
@@ -167,12 +167,12 @@ int Games::GetMonthlyPMin(int refID, int month) const
    return pMinCount;
 }
 
-int Games::GetMonthlyPShot(int refID, int month) const
+int Games::GetMonthlyPShot(int refID, QDate month) const
 {
     int pShotCount=0;
     for(int i=0; i<count; i++)
     {
-        if(games[i]->GetDate().month()==month)
+        if(games[i]->GetDate().month()==month.month())
         {
             if(games[i]->GetRefID()==refID)
             {
@@ -183,12 +183,12 @@ int Games::GetMonthlyPShot(int refID, int month) const
     return pShotCount;
 }
 
-int Games::GetMonthlyGoals(int refID, int month) const
+int Games::GetMonthlyGoals(int refID, QDate month) const
 {
     int goalsCount=0;
     for(int i=0; i<count; i++)
     {
-        if(games[i]->GetDate().month()==month)
+        if(games[i]->GetDate().month()==month.month())
         {
             if(games[i]->GetRefID()==refID)
             {
@@ -199,7 +199,7 @@ int Games::GetMonthlyGoals(int refID, int month) const
     return goalsCount;
 }
 
-std::vector<PenaltyInfo> Games::GetMonthlyPMin(int month)const
+std::vector<PenaltyInfo> Games::GetMonthlyPMin(QDate month)const
 {
     std::vector<PenaltyInfo> pVec;
 
@@ -215,20 +215,20 @@ std::vector<PenaltyInfo> Games::GetMonthlyPMin(int month)const
     }
     for(int i=0; i<pVec.size()-1; i++)
     {
-        int smallestIndex=i;
+        int highestIndex=i;
         for(int k=i; k<pVec.size(); k++)
         {
-            if(pVec[k].totalPenatlies<pVec[smallestIndex].totalPenatlies)
+            if(pVec[k].totalPenatlies>pVec[highestIndex].totalPenatlies)
             {
-                smallestIndex=k;
+                highestIndex=k;
             }
         }
-        std::swap(pVec[smallestIndex],pVec[i]);
+        std::swap(pVec[highestIndex],pVec[i]);
     }
     return pVec;
 }
 
-std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(int month)const
+std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(QDate month)const
 {
     std::vector<PenaltyShotInfo> pSVec;
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
@@ -243,20 +243,20 @@ std::vector<PenaltyShotInfo> Games::GetMonthlyPShot(int month)const
     }
     for(int i=0; i<pSVec.size()-1; i++)
     {
-        int smallestIndex=i;
+        int highestIndex=i;
         for(int k=i; k<pSVec.size(); k++)
         {
-            if(pSVec[k].totalPShots<pSVec[smallestIndex].totalPShots)
+            if(pSVec[k].totalPShots>pSVec[highestIndex].totalPShots)
             {
-                smallestIndex=k;
+                highestIndex=k;
             }
         }
-        std::swap(pSVec[smallestIndex],pSVec[i]);
+        std::swap(pSVec[highestIndex],pSVec[i]);
     }
     return pSVec;
 }
 
-std::vector<GoalsInfo> Games::GetMonthlyGoals(int month)const
+std::vector<GoalsInfo> Games::GetMonthlyGoals(QDate month)const
 {
     std::vector<GoalsInfo> gVec;
     for(int i=0; i<referees->GetNrOfRef()-1; i++)
@@ -271,15 +271,15 @@ std::vector<GoalsInfo> Games::GetMonthlyGoals(int month)const
     }
     for(int i=0; i<gVec.size()-1; i++)
     {
-        int smallestIndex=i;
+        int highestIndex=i;
         for(int k=i; k<gVec.size(); k++)
         {
-            if(gVec[k].totalGoals<gVec[smallestIndex].totalGoals)
+            if(gVec[k].totalGoals>gVec[highestIndex].totalGoals)
             {
-                smallestIndex=k;
+                highestIndex=k;
             }
         }
-        std::swap(gVec[smallestIndex],gVec[i]);
+        std::swap(gVec[highestIndex],gVec[i]);
     }
     return gVec;
 }
