@@ -34,7 +34,7 @@ void GameWindow::on_pushButton_addGame_clicked()
     ui->lineEdit_add_guestTeam->clear();
     ui->lineEdit_add_referee_Fn->clear();
     ui->lineEdit_add_referee_SN->clear();
-    ui->dateEdit_addGame->clear();
+    //ui->dateEdit_addGame->clear();
 }
 
 void GameWindow::on_pushButton_changeRef_clicked()
@@ -54,7 +54,7 @@ void GameWindow::on_pushButton_changeRef_clicked()
     ui->lineEdit_changeRef_guestTeam->clear();
     ui->lineEdit_changeRef_referee_FN->clear();
     ui->lineEdit_changeRef_referee_SN->clear();
-    ui->dateEdit_ChangeRef->clear();
+    //ui->dateEdit_ChangeRef->clear();
 }
 
 void GameWindow::on_pushButton_removeGame_clicked()
@@ -67,7 +67,7 @@ void GameWindow::on_pushButton_removeGame_clicked()
 
     ui->lineEdit_remove_homeTeam->clear();
     ui->lineEdit_remove_guestTeam->clear();
-    ui->dateEdit_RemoveGame->clear();
+    //ui->dateEdit_RemoveGame->clear();
 }
 
 void GameWindow::on_pushButton_addGAtt_clicked()
@@ -83,7 +83,7 @@ void GameWindow::on_pushButton_addGAtt_clicked()
 
     ui->lineEdit_addGAtt_homeTeam->clear();
     ui->lineEdit_addGAtt_guestTeam->clear();
-    ui->dateEdit_AddGAtt->clear();
+    //ui->dateEdit_AddGAtt->clear();
     ui->spinBox_Goals->clear();
     ui->spinBox_Pmin->clear();
     ui->spinBox_PShot->clear();
@@ -121,7 +121,7 @@ void GameWindow::on_pushButton_show_clicked()
 
         ui->lineEdit_ShowOneHName->clear();
         ui->lineEdit_showOneGName->clear();
-        ui->dateEdit_ShowOneDate->clear();
+        //ui->dateEdit_ShowOneDate->clear();
         ui->radioButton_showOne->setAutoExclusive(false);
         ui->radioButton_showOne->setChecked(false);
         ui->radioButton_showOne->setAutoExclusive(true);

@@ -73,7 +73,7 @@ QString Game::ToStringReadable(Referees* referees)
         ret+="Home team: "+this->homeTeam+"\n";
         ret+="Guest team: "+this->guestTeam+"\n";
         ret+="Date: " + this->date.toString("yyyy-MM-dd")+"\n";
-        ret+="Referee:" + referees->ToStringForGame(index)+"\n";
+        ret+="Referee: " + referees->ToStringForGame(index)+"\n";
         ret+="Penalty mins: "+ convertToQstring.setNum(this->penaltiesMin)+"\n";
         ret+="Penalty shots: "+ convertToQstring.setNum(this->penaltyShots)+"\n";
         ret+="Goals: "+ convertToQstring.setNum(this->goals)+"\n";

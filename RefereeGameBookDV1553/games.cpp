@@ -321,7 +321,7 @@ QString Games::ToStringReadableAll() const
 
     for(int i=0; i<count; i++)
     {
-        retStr+=games[i]->ToStringReadable(referees);
+        retStr+=games[i]->ToStringReadable(referees)+"\n";
     }
 
 

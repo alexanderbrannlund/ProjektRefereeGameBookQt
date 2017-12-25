@@ -1,1 +1,211 @@
+30
+Helsingborgs HC
+Gr‰storps IK
+2017-09-17
+-1
+0
+0
+0
+Hanhals IF
+Kristianstads IK
+2017-09-17
+-1
+0
+0
+0
+Kallinge-Ronneby IF
+HA 74 S‰vsjˆ
+2017-09-17
+-1
+0
+0
+0
+Tyringe SoSS
+Vimmerby HC
+2017-09-17
+-1
+0
+0
+0
+HC Dalen
+Nybro Vikings IF
+2017-09-17
+-1
+0
+0
+0
+Halmstad HF
+Tranås AIF IF
+2017-09-18
+-1
+0
+0
+0
+Tranås AIF IF
+HC Dalen
+2017-09-20
+-1
+0
+0
+0
+Nybro Vikings IF
+Tyringe SoSS
+2017-09-20
+-1
+0
+0
+0
+Vimmerby HC
+Kallinge-Ronneby IF
+2017-09-20
+-1
+0
+0
+0
+HA 74 Sävsjö
+Hanhals IF
+2017-09-20
+-1
+0
+0
+0
+Kristianstad IK
+Helsingborgs HC
+2017-09-20
+-1
+0
+0
+0
+Grästorps IK
+Halmstad HF
+2017-09-20
+-1
+0
+0
+0
+Kristianstad IK
+Grästorps IK
+2017-09-23
+-1
+0
+0
+0
+Helsingborgs HC
+HA 74 Sävsjö
+2017-09-24
+-1
+0
+0
+0
+Hanhals IF
+Vimmerby HC
+2017-09-24
+-1
+0
+0
+0
+Kallinge-Ronneby IF
+Nybro Vikings IF
+2017-09-24
+-1
+0
+0
+0
+Tyringe SoSS
+Tranås AIF IF
+2017-09-24
+-1
+0
+0
+0
+HC Dalen
+Halmstad HF
+2017-09-24
+-1
+0
+0
+0
+Halmstad HF
+Tyringe SoSS
+2017-09-27
+-1
+0
+0
+0
+Tranås AIF IF
+Kallinge-Ronneby IF
+2017-09-27
+-1
+0
+0
+0
+Nybro Vikings IF
+Hanhals IF
+2017-09-27
+-1
+0
+0
+0
+Vimmerby HC
+Helsingborgs HC
+2017-09-27
+-1
+0
+0
+0
+HA 74 Sävsjö
+Kristianstad
+2017-09-27
+-1
+0
+0
+0
+Grästorps IK
+HC Dalen
+2017-09-27
+-1
+0
+0
+0
+Kallinge-Ronneby IF
+Halmstad HC
+2017-09-29
+-1
+0
+0
+0
+Kristianstad IK
+Vimmerby HC
+2017-09-30
+-1
+0
+0
+0
+HA 74 Sävsjö
+Grästorps IK
+2017-09-30
+-1
+0
+0
+0
+Helsingborgs HC
+Nybro Vikings IF
+2017-10-01
+-1
+0
+0
+0
+Hanhals IF
+Tranås AIF IF
+2017-10-01
+-1
+0
+0
+0
+Tyringe Soss
+HC Dalen
+2017-10-01
+-1
+0
+0
 0
