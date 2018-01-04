@@ -81,7 +81,7 @@ QString Leaderboards::ShowAllseasonLbByMin()
     return retString;
 }
 
-QString Leaderboards::ShowMontlyLbByMin(QDate month) const
+QString Leaderboards::ShowMonthlyLbByMin(QDate month) const
 {
     QString toString="";
     QString retString=month.toString("MMM")+ ":s Leaderbord by penalty minuts: \n\n";
@@ -111,7 +111,7 @@ QString Leaderboards::ShowAllseasonLbByPShots()
     return retString;
 }
 
-QString Leaderboards::ShowMontlyLbByPShots(QDate month) const
+QString Leaderboards::ShowMonthlyLbByPShots(QDate month) const
 {
     QString toString="";
     QString retString=month.toString("MMM")+ ":s Leaderbord by penalty shots: \n\n";
@@ -140,7 +140,7 @@ QString Leaderboards::ShowAllseasonLbByGoals()
     return retString;
 }
 
-QString Leaderboards::ShowMontlyLbByGoals(QDate month) const
+QString Leaderboards::ShowMonthlyLbByGoals(QDate month) const
 {
 
     QString toString="";
@@ -178,9 +178,9 @@ void Leaderboards::SaveLeaderboardsToFile(int saveingAlt,const QString &fileName
 
     if(saveingAlt==2)
     {
-        out<<ShowMontlyLbByMin(date)+"\n\n\n";
-        out<<ShowMontlyLbByPShots(date)+"\n\n\n";
-        out<<ShowMontlyLbByGoals(date)+"\n\n\n";
+        out<<ShowMonthlyLbByMin(date)+"\n\n\n";
+        out<<ShowMonthlyLbByPShots(date)+"\n\n\n";
+        out<<ShowMonthlyLbByGoals(date)+"\n\n\n";
 
     }
 
@@ -198,15 +198,15 @@ void Leaderboards::SaveLeaderboardsToFile(int saveingAlt,const QString &fileName
     }
     if(saveingAlt==6)
     {
-        out<<ShowMontlyLbByMin(date)+"\n\n\n";
+        out<<ShowMonthlyLbByMin(date)+"\n\n\n";
     }
     if(saveingAlt==7)
     {
-        out<<ShowMontlyLbByPShots(date)+"\n\n\n";
+        out<<ShowMonthlyLbByPShots(date)+"\n\n\n";
     }
     if(saveingAlt==8)
     {
-        out<<ShowMontlyLbByGoals(date)+"\n\n\n";
+        out<<ShowMonthlyLbByGoals(date)+"\n\n\n";
     }
 
 

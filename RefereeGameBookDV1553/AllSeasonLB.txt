@@ -1,57 +1,57 @@
 All season Leaderbord by penalty minuts: 
 
 1: 
-Jim Berqvist
-Total penalty minuts: 0
+Jim Bergqvist
+Total penalty minuts: 155
 
 
 2: 
-Robert Woodbridge
-Total penalty minuts: 0
+André Hiljanen
+Total penalty minuts: 123
 
 
 3: 
 Kristoffer Folkstrand
-Total penalty minuts: 0
+Total penalty minuts: 87
 
 
 4: 
-David Gustafsson
-Total penalty minuts: 0
+Daniel Lindgren
+Total penalty minuts: 75
 
 
 5: 
-Daniel Lidgren
-Total penalty minuts: 0
+Alexander Österberg
+Total penalty minuts: 36
 
 
 6: 
-Morgan Claesson
-Total penalty minuts: 0
+Johan Magnusson
+Total penalty minuts: 34
 
 
 7: 
 Filip Eriksson
-Total penalty minuts: 0
+Total penalty minuts: 30
 
 
 8: 
-André Hiljanen
-Total penalty minuts: 0
+Robert Woodbridge
+Total penalty minuts: 30
 
 
 9: 
-Johan Magnusson
-Total penalty minuts: 0
+Morgan Claesson
+Total penalty minuts: 28
 
 
 10: 
-Sebastian Virta
-Total penalty minuts: 0
+David Gustafsson
+Total penalty minuts: 22
 
 
 11: 
-Alexander Österberg
+Sebastian Virta
 Total penalty minuts: 0
 
 
@@ -61,12 +61,12 @@ Total penalty minuts: 0
 All season Leaderbord by penalty shots: 
 
 1: 
-Jim Berqvist 
-Total penalty shots: 0
+Morgan Claesson 
+Total penalty shots: 1
 
 
 2: 
-Robert Woodbridge 
+André Hiljanen 
 Total penalty shots: 0
 
 
@@ -76,17 +76,17 @@ Total penalty shots: 0
 
 
 4: 
-David Gustafsson 
+Daniel Lindgren 
 Total penalty shots: 0
 
 
 5: 
-Daniel Lidgren 
+Alexander Österberg 
 Total penalty shots: 0
 
 
 6: 
-Morgan Claesson 
+Johan Magnusson 
 Total penalty shots: 0
 
 
@@ -96,22 +96,22 @@ Total penalty shots: 0
 
 
 8: 
-André Hiljanen 
+Robert Woodbridge 
 Total penalty shots: 0
 
 
 9: 
-Johan Magnusson 
+Jim Bergqvist 
 Total penalty shots: 0
 
 
 10: 
-Sebastian Virta 
+David Gustafsson 
 Total penalty shots: 0
 
 
 11: 
-Alexander Österberg 
+Sebastian Virta 
 Total penalty shots: 0
 
 
@@ -121,57 +121,57 @@ Total penalty shots: 0
 All season Leaderbord by goals: 
 
 1: 
-Jim Berqvist 
-Total goals: 0
+André Hiljanen 
+Total goals: 39
 
 
 2: 
-Robert Woodbridge 
-Total goals: 0
+Kristoffer Folkstrand 
+Total goals: 37
 
 
 3: 
-Kristoffer Folkstrand 
-Total goals: 0
+Jim Bergqvist 
+Total goals: 29
 
 
 4: 
-David Gustafsson 
-Total goals: 0
+Daniel Lindgren 
+Total goals: 23
 
 
 5: 
-Daniel Lidgren 
-Total goals: 0
+Alexander Österberg 
+Total goals: 16
 
 
 6: 
-Morgan Claesson 
-Total goals: 0
+David Gustafsson 
+Total goals: 14
 
 
 7: 
 Filip Eriksson 
-Total goals: 0
+Total goals: 13
 
 
 8: 
-André Hiljanen 
-Total goals: 0
+Robert Woodbridge 
+Total goals: 8
 
 
 9: 
 Johan Magnusson 
-Total goals: 0
+Total goals: 7
 
 
 10: 
-Sebastian Virta 
-Total goals: 0
+Morgan Claesson 
+Total goals: 6
 
 
 11: 
-Alexander Österberg 
+Sebastian Virta 
 Total goals: 0
 
 

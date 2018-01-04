@@ -19,9 +19,6 @@ public:
     Game(const QString& homeTeam, const QString& guestTeam, QDate date, int refID=-1, int penaltiesMin=0,int penaltyShots=0, int goals=0);
     ~Game();
 
-   //QString GetHomeTeam()const;
-    //QString GetGuestTeam()const;
-
     int GetPenaltiesMin()const;
     int GetPenaltyShots() const;
     int GetGoals() const;

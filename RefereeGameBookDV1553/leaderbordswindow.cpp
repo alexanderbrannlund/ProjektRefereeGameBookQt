@@ -64,7 +64,7 @@ void LeaderbordsWindow::on_pushButton_show_clicked()
 
     if(ui->radioButton_show_mByPM->isChecked())
     {
-        toPrint=lb.ShowMontlyLbByMin(date);
+        toPrint=lb.ShowMonthlyLbByMin(date);
         ui->textBrowser->setText(toPrint);
 
         ui->radioButton_show_mByPM->setAutoExclusive(false);
@@ -74,7 +74,7 @@ void LeaderbordsWindow::on_pushButton_show_clicked()
 
     if(ui->radioButton_show_mByPS->isChecked())
     {
-        toPrint=lb.ShowMontlyLbByPShots(date);
+        toPrint=lb.ShowMonthlyLbByPShots(date);
         ui->textBrowser->setText(toPrint);
 
         ui->radioButton_show_mByPS->setAutoExclusive(false);
@@ -84,7 +84,7 @@ void LeaderbordsWindow::on_pushButton_show_clicked()
 
     if(ui->radioButton_show_mByG->isChecked())
     {
-        toPrint=lb.ShowMontlyLbByGoals(date);
+        toPrint=lb.ShowMonthlyLbByGoals(date);
         ui->textBrowser->setText(toPrint);
 
         ui->radioButton_show_mByG->setAutoExclusive(false);
@@ -94,9 +94,9 @@ void LeaderbordsWindow::on_pushButton_show_clicked()
 
     if(ui->radioButton_show_mAll->isChecked())
     {
-        toPrint=lb.ShowMontlyLbByMin(date)+"\n\n";
-        toPrint+=lb.ShowMontlyLbByPShots(date)+"\n\n";
-        toPrint+= lb.ShowMontlyLbByGoals(date);
+        toPrint=lb.ShowMonthlyLbByMin(date)+"\n\n";
+        toPrint+=lb.ShowMonthlyLbByPShots(date)+"\n\n";
+        toPrint+= lb.ShowMonthlyLbByGoals(date);
         ui->textBrowser->setText(toPrint);
 
         ui->radioButton_show_mAll->setAutoExclusive(false);
