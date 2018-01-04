@@ -144,7 +144,7 @@ QString Leaderboards::ShowMonthlyLbByGoals(QDate month) const
 {
 
     QString toString="";
-    QString retString=month.toString("MMM")+ ":s Leaderbord by penalty minuts: \n\n";
+    QString retString=month.toString("MMM")+ ":s Leaderbord by Goals: \n\n";
 
     std::vector<GoalsInfo> gVec=games.GetMonthlyGoals(month);
     for(int i=0; i<gVec.size(); i++)

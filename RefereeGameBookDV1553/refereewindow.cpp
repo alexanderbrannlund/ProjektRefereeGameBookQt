@@ -62,6 +62,7 @@ void RefereeWindow::on_Show_clicked()
         }
 
         ui->lineEdit_show_firstName->clear();
+        ui->lineEdit_show_surName->clear();
         ui->radioButton_showOne->setAutoExclusive(false);
         ui->radioButton_showOne->setChecked(false);
         ui->radioButton_showOne->setAutoExclusive(true);
